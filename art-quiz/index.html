@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art quiz</title>
+    <link rel="stylesheet" href="assets/fonts/FontAwesome/stylesheet.css" />
+    <link rel="stylesheet" href="assets/fonts/Gilroy/stylesheet.css" />
+    <link rel="stylesheet" href="assets/fonts/Montserrat/stylesheet.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <div class="global-wrapper">
+      <div class="border-wrapper">
+        <div class="wrapper">
+          <div class="main-menu main-menu-active" id="main-menu">
+            <div class="container">
+              <h1 class="main-menu_title">Art-quiz</h1>
+              <div class="main-menu_subtitle">
+                by
+                <a href="https://github.com/na1led" target="_blank">na1led</a>
+              </div>
+              <div class="main_menu-btn-block">
+                <div class="main_menu-btn_wrapper">
+                  <div class="main_menu-btn-3d" id="artists-btn">
+                    <div class="main_menu-btn">
+                      <i class="fal fa-person-sign icon-artist"></i>Artists
+                    </div>
+                  </div>
+                </div>
+                <div class="main_menu-btn_wrapper">
+                  <div class="main_menu-btn-3d" id="pictures-btn">
+                    <div class="main_menu-btn">
+                      <i class="fal fa-image icon-image"></i>Pictures
+                    </div>
+                  </div>
+                </div>
+                <div class="main_menu-btn_wrapper">
+                  <div class="main_menu-btn-3d" id="gallery-btn">
+                    <div class="main_menu-btn">
+                      <i class="fal fa-images icon-gallery"></i>Gallery
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main_menu-btn_wrapper">
+                <div class="main_menu-btn-3d" id="settings-btn">
+                  <div class="main_menu-btn-small">
+                    <i class="fal fa-cog icon-settings"></i>
+                  </div>
+                </div>
+                <div class="main_menu-btn-3d" id="music-btn">
+                  <div class="main_menu-btn-small">
+                    <i class="fal fa-music icon-music icon-music-mute"></i>
+                  </div>
+                </div>
+                <div class="main_menu-btn-3d" id="volume-btn">
+                  <div class="main_menu-btn-small">
+                    <i class="fal fa-volume icon-volume"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="category-lvls" id="artists-cards">
+            <div class="category-btn-back" id="artists-btn-back">
+              <i class="fal fa-undo icon-back"></i>
+            </div>
+            <div class="category-lvl-grid">
+              <div class="category-lvl" id="artists-card-1">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>01</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="artists-card-2">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>02</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="artists-card-3">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>03</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="artists-card-4">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>04</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="artists-card-5">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>05</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="artists-card-6">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>06</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="artists-card-7">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>07</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="artists-card-8">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>08</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="artists-card-9">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>09</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="artists-card-10">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>10</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="artists-card-11">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>11</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="artists-card-12">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>12</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+            </div>
+          </div>
+          <div class="category-lvls" id="pictures-cards">
+            <div class="category-btn-back" id="pictures-btn-back">
+              <i class="fal fa-undo icon-back"></i>
+            </div>
+            <div class="category-lvl-grid">
+              <div class="category-lvl" id="pictures-card-1">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>01</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="pictures-card-2">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>02</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="pictures-card-3">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>03</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="pictures-card-4">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>04</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="pictures-card-5">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>05</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="pictures-card-6">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>06</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="pictures-card-7">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>07</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="pictures-card-8">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>08</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="pictures-card-9">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>09</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="pictures-card-10">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>10</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="pictures-card-11">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>11</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+              <div class="category-lvl" id="pictures-card-12">
+                <div class="category-lvl-left">
+                  <div class="category-lvl-title"><span>12</span> level</div>
+                  <div class="category-lvl-stars">
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                    <i class="fal fa-star icon-light-star category-star"></i>
+                  </div>
+                </div>
+                <div class="category-lvl-score">0/10</div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery">
+            <div class="category-btn-back" id="gallery-btn-back">
+              <i class="fal fa-undo icon-back"></i>
+            </div>
+            <div class="gallery-grid">
+              <!-- <div class="gallery-card">
+								<img src="assets/img/source/1.jpg" alt="" class="gallery-card-img" />
+								<div class="gallery-card-text">
+									<h3 class="gallery-card-name">Девушка на ветру</h3>
+									<h4 class="gallery-card-author">Аксели Галлен-Каллела</h4>
+									<h5 class="gallery-card-year">1893</h5>
+								</div>
+							</div> -->
+            </div>
+          </div>
+          <div class="settings">
+            <div class="category-btn-back" id="settings-btn-back">
+              <i class="fal fa-undo icon-back"></i>
+            </div>
+            <div class="settings-music-block">
+              <div class="main_menu-btn-small" id="settings-music-btn">
+                <i class="fal fa-music icon-music icon-music-mute"></i>
+              </div>
+              <input type="range" class="settings-music-input" value="0" />
+              <div class="settings-music-value">0%</div>
+            </div>
+            <div class="settings-volume-block">
+              <div class="main_menu-btn-small" id="settings-volume-btn">
+                <i class="fal fa-volume icon-volume"></i>
+              </div>
+              <input type="range" class="settings-volume-input" value="20" />
+              <div class="settings-volume-value">20%</div>
+            </div>
+            <div class="settings-extra-block">
+              <div class="main_menu-btn-small" id="settings-clear-progress">
+                <i class="fas fa-power-off icon-poweroff"></i>Reset progress
+              </div>
+              <div class="settings-contacts-block">
+                <a
+                  href="https://github.com/na1led"
+                  target="_blank"
+                  class="main_menu-btn-small"
+                  id="settings-github"
+                  ><i class="fab fa-github icon-github"></i
+                ></a>
+                <a
+                  href="https://t.me/na1led"
+                  target="_blank"
+                  class="main_menu-btn-small"
+                  id="settings-telegram"
+                  ><i class="fab fa-telegram-plane icon-telegram"></i
+                ></a>
+              </div>
+            </div>
+            <div class="reset-confirmation">
+              Are you sure you want to erase all your progress?
+              <div class="reset-confirmation-btn-block">
+                <div class="reset-confirmation-btn" id="confirm-yes">Yes</div>
+                <div class="reset-confirmation-btn" id="confirm-no">No</div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="round-descr">
+            <div class="category-btn-back" id="round-descr-btn-back">
+              <i class="fal fa-undo icon-back"></i>
+            </div>
+            <div class="round-descr-title"><span>01</span> level</div>
+            <div class="round-descr-stars">
+              <i class="fal fa-star icon-light-star category-star"></i>
+              <i class="fal fa-star icon-light-star category-star"></i>
+              <i class="fal fa-star icon-light-star category-star"></i>
+            </div>
+            <div class="round-descr-wrapper">
+              <div class="round-descr-card">
+                <img
+                  src="assets/img/source/0.jpg"
+                  alt=""
+                  class="round-descr-card-img"
+                />
+                <i class="fas fa-check icon-correct"></i>
+              </div>
+              <div class="round-descr-card">
+                <img
+                  src="assets/img/source/0.jpg"
+                  alt=""
+                  class="round-descr-card-img"
+                />
+                <i class="fas fa-times icon-wrong"></i>
+              </div>
+              <div class="round-descr-card">
+                <img
+                  src="assets/img/source/0.jpg"
+                  alt=""
+                  class="round-descr-card-img"
+                />
+                <i class="fas fa-check icon-correct"></i>
+              </div>
+              <div class="round-descr-card">
+                <img
+                  src="assets/img/source/0.jpg"
+                  alt=""
+                  class="round-descr-card-img"
+                />
+                <i class="fas fa-times icon-wrong"></i>
+              </div>
+              <div class="round-descr-card">
+                <img
+                  src="assets/img/source/0.jpg"
+                  alt=""
+                  class="round-descr-card-img"
+                />
+                <i class="fas fa-check icon-correct"></i>
+              </div>
+              <div class="round-descr-card">
+                <img
+                  src="assets/img/source/0.jpg"
+                  alt=""
+                  class="round-descr-card-img"
+                />
+                <i class="fas fa-times icon-wrong"></i>
+              </div>
+              <div class="round-descr-card">
+                <img
+                  src="assets/img/source/0.jpg"
+                  alt=""
+                  class="round-descr-card-img"
+                />
+                <i class="fas fa-check icon-correct"></i>
+              </div>
+              <div class="round-descr-card">
+                <img
+                  src="assets/img/source/0.jpg"
+                  alt=""
+                  class="round-descr-card-img"
+                />
+                <i class="fas fa-times icon-wrong"></i>
+              </div>
+              <div class="round-descr-card">
+                <img
+                  src="assets/img/source/0.jpg"
+                  alt=""
+                  class="round-descr-card-img"
+                />
+                <i class="fas fa-check icon-correct"></i>
+              </div>
+              <div class="round-descr-card">
+                <img
+                  src="assets/img/source/0.jpg"
+                  alt=""
+                  class="round-descr-card-img"
+                />
+                <i class="fas fa-times icon-wrong"></i>
+              </div>
+            </div>
+            <div class="round-descr-score">06/10</div>
+            <div class="round-descr-btn">Play</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <script src="assets/img/img.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

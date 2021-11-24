@@ -1,0 +1,49 @@
+.icon-settings::before{
+	content: '\f013';
+}
+.icon-image::before{
+	content: '\f03e';
+}
+.icon-artist::before{
+	content: '\f757';
+}
+.icon-gallery::before{
+	content: '\f302';
+}
+.icon-back::before{
+	content: '\f0e2';
+}
+.icon-light-star::before{
+	content: '\f005';
+
+}
+.icon-solid-star::before{
+	content: '\f005';
+}
+.icon-music::before{
+	content: '\f001';
+}
+.icon-music-mute::before{
+	content: '\f8d1';
+}
+.icon-volume::before{
+	content: '\f6a8';
+}
+.icon-volume-mute::before{
+	content: '\f6a9';
+}
+.icon-github::before{
+	content: '\f09b';
+}
+.icon-telegram::before{
+	content: '\f3fe';
+}
+.icon-poweroff::before{
+	content: '\f011';
+}
+.icon-wrong::before{
+	content: '\f00d';
+}
+.icon-correct::before{
+	content: '\f00c';
+}
