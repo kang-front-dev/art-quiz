@@ -682,7 +682,7 @@ function generateArtistsLvl(lvlNum, lvlStage, score) {
   lvlResultBtn.addEventListener('click', () => {
     deleteLvl(lvl);
     if (lvlNum + 1 > 10) {
-      artistsLvls.classList.add('artists-lvl-active');
+      artistsLvls.classList.add('category-lvls-active');
       if (!localStorage.getItem(`artistsStage${lvlStage}Score`)) {
         localStorage.setItem(`artistsStage${lvlStage}Score`, lvlScore);
       } else {
