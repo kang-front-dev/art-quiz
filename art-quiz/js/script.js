@@ -229,8 +229,8 @@ function updateScore() {
   let score = 0;
   for (let i = 0; i < artists.length; i++) {
     let scoreText = artists[i].querySelector('.category-lvl-score');
-    if (localStorage.getItem(`artistsStage${i + 1}score`)) {
-      score = localStorage.getItem(`artistsStage${i + 1}score`);
+    if (localStorage.getItem(`artistsStage${i + 1}Score`)) {
+      score = localStorage.getItem(`artistsStage${i + 1}Score`);
       scoreText.textContent = `${score}/10`;
     } else {
       score = 0;
@@ -249,12 +249,18 @@ function updateScore() {
     for (let t = 0; t < amountOfSolid; t++) {
       stars[t].className = 'fas fa-star icon-solid-star';
     }
+
+    if (localStorage.getItem(`artistsStage${i+1}Score`)) {
+      artists[i].classList.add('category-lvl-active');
+      console.log('played!');
+    }
+
   }
   for (let i = 0; i < pictures.length; i++) {
     let scoreText = pictures[i].querySelector('.category-lvl-score');
     let score = 0;
-    if (localStorage.getItem(`picturesStage${i + 1}score`)) {
-      score = localStorage.getItem(`picturesStage${i + 1}score`);
+    if (localStorage.getItem(`picturesStage${i + 1}Score`)) {
+      score = localStorage.getItem(`picturesStage${i + 1}Score`);
       scoreText.textContent = `${score}/10`;
     } else {
       score = 0;
@@ -276,15 +282,14 @@ function updateScore() {
       stars[t].className = 'fas fa-star icon-solid-star';
     }
   }
+
+  
 }
 
 function generateLvlCardBg(amount, mode) {
   if (amount > 0) {
     if (mode === 'artists') {
       let card = document.querySelector(`#artists-card-${amount}`);
-      if (localStorage.getItem(`artistsStage${amount}score`)) {
-        card.classList.add('category-lvl-active');
-      }
       let imgNum = amount * 10;
       card.style.backgroundImage = `url('assets/img/source/${imgNum}.jpg')`;
       card.style.backgroundSize = 'cover';
@@ -292,7 +297,7 @@ function generateLvlCardBg(amount, mode) {
       generateLvlCardBg(amount - 1, 'artists');
     } else if (mode === 'pictures') {
       let card = document.querySelector(`#pictures-card-${amount}`);
-      if (localStorage.getItem(`picturesStage${amount}score`)) {
+      if (localStorage.getItem(`picturesStage${amount}Score`)) {
         card.classList.add('category-lvl-active');
       }
       let imgNum = (amount + 12) * 10;
@@ -678,11 +683,11 @@ function generateArtistsLvl(lvlNum, lvlStage, score) {
     deleteLvl(lvl);
     if (lvlNum + 1 > 10) {
       artistsLvls.classList.add('artists-lvl-active');
-      if (!localStorage.getItem(`artistsStage${lvlStage}score`)) {
-        localStorage.setItem(`artistsStage${lvlStage}score`, lvlScore);
+      if (!localStorage.getItem(`artistsStage${lvlStage}Score`)) {
+        localStorage.setItem(`artistsStage${lvlStage}Score`, lvlScore);
       } else {
-        localStorage.removeItem(`artistsStage${lvlStage}score`);
-        localStorage.setItem(`artistsStage${lvlStage}score`, lvlScore);
+        localStorage.removeItem(`artistsStage${lvlStage}Score`);
+        localStorage.setItem(`artistsStage${lvlStage}Score`, lvlScore);
       }
       updateScore();
       roundEndSound.play();
@@ -859,11 +864,11 @@ function generatePicturesLvl(lvlNum, lvlStage, score) {
     deleteLvl(lvl);
     if (lvlNum + 1 > 10) {
       picturesLvls.classList.add('category-lvls-active');
-      if (!localStorage.getItem(`picturesStage${lvlStage}score`)) {
-        localStorage.setItem(`picturesStage${lvlStage}score`, lvlScore);
+      if (!localStorage.getItem(`picturesStage${lvlStage}Score`)) {
+        localStorage.setItem(`picturesStage${lvlStage}Score`, lvlScore);
       } else {
-        localStorage.removeItem(`picturesStage${lvlStage}score`);
-        localStorage.setItem(`picturesStage${lvlStage}score`, lvlScore);
+        localStorage.removeItem(`picturesStage${lvlStage}Score`);
+        localStorage.setItem(`picturesStage${lvlStage}Score`, lvlScore);
       }
       updateScore();
       roundEndSound.play();
@@ -1106,8 +1111,8 @@ resetProgressBtn.addEventListener('click', () => {
 
 function resetAllProgress() {
   for (let i = 1; i <= 12; i++) {
-    if (localStorage.getItem(`artistsStage${i}score`)) {
-      localStorage.removeItem(`artistsStage${i}score`);
+    if (localStorage.getItem(`artistsStage${i}Score`)) {
+      localStorage.removeItem(`artistsStage${i}Score`);
     }
     for (let t = 1; t <= 12; t++) {
       if (localStorage.getItem(`artistsStage${i}Lvl${t}Answer`)) {
@@ -1116,8 +1121,8 @@ function resetAllProgress() {
     }
   }
   for (let i = 1; i <= 12; i++) {
-    if (localStorage.getItem(`picturesStage${i}score`)) {
-      localStorage.removeItem(`picturesStage${i}score`);
+    if (localStorage.getItem(`picturesStage${i}Score`)) {
+      localStorage.removeItem(`picturesStage${i}Score`);
     }
     for (let t = 1; t <= 12; t++) {
       if (localStorage.getItem(`picturesStage${i}Lvl${t}Answer`)) {
